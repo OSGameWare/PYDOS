@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "Py-DoS"
+version = "202501"
+description = "MS-Dos-like tool for Python"
+authors = ["JMRDev Games"]
+
+[tool.poetry.dependencies]
+python = ">=3.10.0,<3.12"
+drive = "^0.4.4"
+
+[tool.pyright]
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+# https://beta.ruff.rs/docs/configuration/
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293', 'E501']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
